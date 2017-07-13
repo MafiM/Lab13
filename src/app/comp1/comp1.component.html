@@ -1,0 +1,15 @@
+<h3>Component 1</h3>
+    <ul>
+      <li *ngFor="let fruit of fruits">{{fruit}}</li>
+    </ul>
+
+
+<!--use appUpper directive-->
+<li appUpper>some text</li>
+
+<!--use appMyvisibility directive-->
+<p [appMyvisibility]="false">hide/show text</p>
+
+<!--use appMycolor directive-->
+<p [ngStyle]="{'color': selectedColor}" appMycolor (click)="getCurrentColor($event)" >color text</p>
+<p>{{selectedColor}}</p>
